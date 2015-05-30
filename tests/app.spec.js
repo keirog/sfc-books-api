@@ -4,7 +4,6 @@ var expect = require('chai').expect;
 var app = require('../app');
 
 describe('Clavivox', function () {
-
 	it('should export an object', function () {
 		expect(app).to.be.an('object');
 	});

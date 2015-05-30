@@ -2,4 +2,4 @@ install:
 	npm install
 
 test:
-	mocha ./tests/app.spec.js
+	mocha ./tests/*.spec.js
