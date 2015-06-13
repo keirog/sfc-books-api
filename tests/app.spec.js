@@ -1,14 +1,23 @@
 'use strict';
 
 var expect = require('chai').expect;
-var app = require('../app');
+var request = require('supertest');
+var app = require('../server/app');
 
 describe('Clavivox', function () {
-	it('should export an object', function () {
-		expect(app).to.be.an('object');
-	});
+	describe('GET /search', function () {
+		it('should return 200', function (done) {
+			request(app)
+				.get('/search')
+				.expect(200, done);
+		});
 
-	it('should have a search method', function () {
-		expect(app.search).to.be.an('function');
+		it('should serve html that contains a form', function (done) {
+			request(app)
+				.get('/search')
+				.expect('Content-Type', /text\/html/)
+				.expect(/<html/)
+				.expect(/<form/, done);
+		});
 	});
 });

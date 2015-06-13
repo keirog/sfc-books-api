@@ -2,7 +2,7 @@
   "name": "sfc-clavivox",
   "version": "0.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "server/app.js",
   "scripts": {
     "test": "make test"
   },
@@ -18,9 +18,13 @@
     "chai": "^2.3.0",
     "chai-as-promised": "^5.0.0",
     "mocha": "^2.2.5",
-    "sinon": "^1.14.1"
+    "nodemon": "^1.3.7",
+    "sinon": "^1.14.1",
+    "supertest": "^1.0.1"
   },
   "dependencies": {
+    "express": "^4.12.4",
+    "express-handlebars": "^2.0.1",
     "request": "^2.56.0"
   }
 }
