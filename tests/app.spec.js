@@ -1,7 +1,7 @@
 'use strict';
 
 var expect = require('chai').expect;
-var app = require('../app');
+var app = require('../server/app');
 
 describe('Clavivox', function () {
 	it('should export an object', function () {

@@ -6,7 +6,7 @@ var expect = chai.expect;
 var sinon = require('sinon');
 var request = require('request');
 
-var search = require('../lib/search');
+var search = require('../server/lib/search');
 var fakeResult = require('./google-books-result');
 var fakeResponses = require('./fake-responses');
 
